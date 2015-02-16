@@ -46,7 +46,7 @@ else
   default['php']['cgi_conf_dir']  = '/etc/php5/cgi'
   default['php']['ext_conf_dir']  = '/etc/php5/conf.d'
   default['php']['pear_dir']      = '/usr/share/php'
-  default['php']['session_dir']   = '/var/lib/php5/session5'
+  default['php']['session_dir']   = '/var/lib/php5/session'
   default['php']['upload_dir']    = '/var/lib/php5/uploads'
 end
 
@@ -72,7 +72,8 @@ default['php']['ini_settings'] = {
   'cgi.fix_pathinfo' => '1',
   'upload_max_filesize' => '32M',
   'date.timezone' => 'UTC',
-  'session.cookie_httponly' => '0'
+  'session.cookie_httponly' => '0',
+  'session.save_handler' => 'files'
 }
 
 default['php']['tmpfs'] = true
