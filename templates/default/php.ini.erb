@@ -1515,7 +1515,7 @@ session.cookie_path = /
 
 ; The domain for which the cookie is valid.
 ; http://php.net/session.cookie-domain
-session.cookie_domain =
+session.cookie_domain = <%= node['php']['ini_settings']['session.cookie_domain'] %>
 
 ; Whether or not to add the httpOnly flag to the cookie, which makes it inaccessible to browser scripting languages such as JavaScript.
 ; http://php.net/session.cookie-httponly
